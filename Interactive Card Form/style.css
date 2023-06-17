@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.left-container {
+    max-width: 30%;
+    background: url('./image/bg-main-desktop.png') no-repeat center center/ cover ;
+    min-height: 100vh;   
+}
+
+.font {
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 600px;
+    max-height: 400px;
+}

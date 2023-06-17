@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Poppins: "Poppins", sans-serif;
+  --Bitter: "Bitter", serif;
+
+  --primary: #32b768;
+  --bold-text: #070707;
+  --grey-text: #636363;
+  --light-green: #d7f4e3;
+  --primary-text: #1a1919;
+}
+
+body {
+  min-width: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: var(--primary-text);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: var(--Poppins);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
+.header-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content h2 {
+  font-family: var(--Poppins);
+  font-size: 2rem;
+  line-height: 33px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: var(--bold-text);
+}
+
+.content h2 span {
+  color: var(--primary);
+}
+
+.content ul {
+  list-style: none;
+  display: flex;
+  column-gap: 1.6rem;
+}
+
+.content .list-item {
+  font-family: var(--Poppins);
+  font-size: 1rem;
+  font-weight: 600;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  padding-bottom: 2px;
+  background-image: linear-gradient(var(--primary) 0 0);
+  background-repeat: no-repeat;
+  transition: color 0.3s, background-size 0.3s, background-position 0s 0.3s;
+}
+
+.content .list-item:hover {
+  color: var(--primary);
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+}
+
+.content .search-bar {
+  position: relative;
+}
+
+.content .search-bar input {
+  padding: 0.5rem 1.5rem 0.5rem 3rem;
+  border: none;
+  background-color: rgb(254, 252, 252);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--Bitter);
+}
+
+.content .search-bar img {
+  position: absolute;
+  top: 25%;
+  left: 10px;
+  width: 15px;
+  object-fit: cover;
+}
+
+.hero-container {
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-container .hero-info-container {
+}
+
+.hero-container .hero-info-container h3 {
+  font-family: var(--Poppins);
+  font-size: 3rem;
+  line-height: 4.5rem;
+  font-weight: 700;
+  max-width: 400px;
+  margin-bottom: 0.7rem;
+}
+
+.hero-container .hero-info-container p {
+  line-height: 1.7rem;
+
+  font-family: var(--Bitter);
+  color: #636363;
+
+  font-size: 18px;
+}
+
+.hero-container .hero-info-container .hero-buttun-container {
+    display: flex;
+    column-gap: 1rem;
+    padding: 1.5rem 0;
+}
+
+.hero-container .hero-info-container .hero-buttun-container .button-filled {
+    background-color: var(--primary);
+    padding: 1rem 1.5rem;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--Poppins);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+}
+
+.hero-container .hero-info-container .hero-buttun-container .button-filled:hover {
+    background-color: rgb(9, 168, 9);
+}
+
+.hero-container .hero-info-container .hero-buttun-container .button-oulined {
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    color: var(--primary);
+    border-radius: 10px;
+    border: 1.5px solid var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--Poppins);
+    cursor: pointer;
+}
+
+.hero-banner-container img {
+  max-width: 550px;
+  object-fit: contain;
+  border-radius: 2%;
+}
