@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(20, 174, 174);
+}
+
+.container {
+    padding: 1rem 2rem;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.add-notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.add-notes button {
+    outline: none;
+    border: none;
+    padding: 0.7rem 1rem;
+    background-color: aquamarine;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.note {
+    width: 350px;
+    height: 350px;
+    background-color: rgb(107, 237, 194);
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0 , 0, 0.4);
+}
+
+.note .action {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: end;
+    column-gap: 1rem;
+    background-color: rgb(6, 79, 55);
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.note .action button {
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    font-size: 16px;
+    background-color:  rgba(58, 232, 174, 0.1);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.main {
+    
+    height: 298px;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    resize: none;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Helvetica, sans-serif;
+    padding: 0.6rem 0.4rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.notes .input-text {
+    
+    height: 298px;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    resize: none;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Helvetica, sans-serif;
+    padding: 0.6rem 0.4rem;
+}
+
+
+
