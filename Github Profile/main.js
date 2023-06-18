@@ -6,17 +6,31 @@ const main = document.getElementById('main');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const value = document.querySelector('input[name=search]').value;
-    
-    getUserProfile(value);
+    if(value) getUserProfile(value);
 });
 
 async function getUserProfile(username) {
     const User_Profile_URL = `${API_URL}${username}`;
     const response = await fetch(User_Profile_URL);
-    const data = await response.json();
-    createUserCard(data);
+    if(response.status == 200) {
+        const data = await response.json();
+        createUserCard(data);
+    } else {
+        showNotFoundCard();
+    }
+    
 }
 
+function showNotFoundCard () {
+    const CARD_HTML = `
+        <div class="card-not-found">
+            <h3>404 Not Found</h3>
+        </div>
+    `
+
+    main.innerHTML = CARD_HTML;
+}
+ 
 function createUserCard(user) {
     const CARD_HTML = `
         <div class="card">
@@ -24,7 +38,7 @@ function createUserCard(user) {
                 <img src="${user.avatar_url}" alt="${user.name}" />
             </div>
             <div class="user-info">
-                <a target="_blank" href="${user.html_url}">${user.name}</a>
+                <a target="_blank" href="${user.html_url}">${user.name ?? user.login}</a>
                 <p>${user.bio}</p>
 
                 <ul class="user-stats">
